@@ -19,7 +19,7 @@ class Blog(db.Model):
         for k in kwargs:
             setattr(self, k, kwargs[k])
         try:
-            self.created_by = Auth.get_logged_in_user(request)[0]['data']['user_name']
+            self.created_by = Auth.get_logged_in_user(request)[0]['data']['user_id']
         except (IndexError, KeyError):
             self.created_by = 'unknown'
         self.created_on = datetime.datetime.utcnow()
