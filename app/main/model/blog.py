@@ -3,7 +3,7 @@ import datetime
 
 
 class Blog(db.Model):
-    """ User Model for storing user related details """
+    """ User Model for storing blog post related details """
     __tablename__ = "blog"
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -18,3 +18,7 @@ class Blog(db.Model):
         self.created_on = datetime.datetime.utcnow()
         for k in kwargs:
             setattr(self, k, kwargs[k])
+
+    def __repr__(self):
+        return '<id:{self.id} title: {self.title}>'.format(self=self)
+

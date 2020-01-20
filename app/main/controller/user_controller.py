@@ -13,7 +13,6 @@ _user = UserDto.user
 class UserList(Resource):
     @api.doc('list_of_registered_users')
     @admin_token_required
-    # @api.doc(security=None)
     @api.marshal_list_with(_user, envelope='data')
     def get(self):
         """List all registered users"""

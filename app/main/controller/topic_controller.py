@@ -21,6 +21,7 @@ class TopicListResource(Resource):
     @api.expect(_topic_create, validate=True)
     @api.response(201, 'Topic successfully created.')
     @api.doc('create a new topic')
+    @token_required
     def post(self):
         """Creates a new Topic"""
         data = request.json

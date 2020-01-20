@@ -20,7 +20,7 @@ class PostListResource(Resource):
     
     @api.expect(_blog_create, validate=True)
     @api.response(201, 'Post successfully created.')
-    @api.doc('create a new topic')
+    @api.doc('create a new post')
     def post(self):
         """Creates a new post"""
         data = request.json
