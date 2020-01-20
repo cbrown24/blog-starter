@@ -89,6 +89,7 @@ INFO  [alembic.runtime.migration] Running upgrade  -> c292fb06f01d, empty messag
 ## Testing Using Swagger 
 Startup using
 ```
+python manage.py run
 ```
 - Unfortunately due to time constraints,  automated testing is not included in this project.
 - This application can be tested using the swagger UI which is available on localhost:5000/api
