@@ -12,3 +12,6 @@ class Topic(db.Model):
     name = db.Column(db.String(100))
     body = db.Column(db.String(800))
     posts = db.relationship('Blog')
+
+    def __repr__(self):
+        return '<id:{self.id} title: {self.name}>'.format(self=self)
